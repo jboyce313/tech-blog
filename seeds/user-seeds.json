@@ -1,0 +1,27 @@
+[
+  {
+    "username": "johndoe",
+    "email": "johndoe@example.com",
+    "password": "qwe123"
+  },
+  {
+    "username": "janedoe",
+    "email": "janedoe@example.com",
+    "password": "abcd1234"
+  },
+  {
+    "username": "bobsmith",
+    "email": "bobsmith@example.com",
+    "password": "p@ssword"
+  },
+  {
+    "username": "sarahjones",
+    "email": "sarahjones@example.com",
+    "password": "secret1"
+  },
+  {
+    "username": "mikebrown",
+    "email": "mikebrown@example.com",
+    "password": "myp4ss"
+  }
+]

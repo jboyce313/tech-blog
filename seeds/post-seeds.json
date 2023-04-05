@@ -1,0 +1,27 @@
+[
+  {
+    "title": "First Post",
+    "content": "This is my first post on this platform.",
+    "user_id": 5
+  },
+  {
+    "title": "Second Post",
+    "content": "Here's another post I wanted to share.",
+    "user_id": 3
+  },
+  {
+    "title": "Third Post",
+    "content": "I have some thoughts on the current political climate.",
+    "user_id": 2
+  },
+  {
+    "title": "Fourth Post",
+    "content": "I'm excited to announce my new project!",
+    "user_id": 1
+  },
+  {
+    "title": "Fifth Post",
+    "content": "I've been working on this for months and I'm finally ready to share it.",
+    "user_id": 4
+  }
+]
