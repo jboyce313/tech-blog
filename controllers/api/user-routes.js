@@ -2,6 +2,7 @@ const router = require("express").Router();
 const bcrypt = require("bcrypt");
 const { User, Post } = require("../../models/");
 
+// register new user
 router.post("/", async (req, res) => {
   try {
     const password = await bcrypt.hash(req.body.password, 10);
@@ -17,6 +18,7 @@ router.post("/", async (req, res) => {
   }
 });
 
+// login
 router.post("/login", async (req, res) => {
   try {
     const userData = await User.findOne({
@@ -52,6 +54,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
+// logout
 router.post("/logout", (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
@@ -64,6 +67,7 @@ router.post("/logout", (req, res) => {
   }
 });
 
+// get user by id and include their posts
 router.get("/:id", async (req, res) => {
   try {
     const userData = await User.findByPk(req.params.id, {
