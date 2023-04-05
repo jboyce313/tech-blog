@@ -26,10 +26,21 @@ Post.init(
         key: "id",
       },
     },
+    createdAt: {
+      type: DataTypes.DATEONLY,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
+    updatedAt: {
+      type: DataTypes.DATEONLY,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
   },
   {
     sequelize,
     freezeTableName: true,
+    timestamps: false,
     underscored: true,
     modelName: "post",
   }
