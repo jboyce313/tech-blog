@@ -29,4 +29,20 @@ router.get("/dashboard", (req, res) => {
   });
 });
 
+router.get("/post/:id", async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [{ model: Comment }],
+    });
+    const post = postData.get({ plain: true });
+    res.render("post-comments", {
+      post,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(200).json(err);
+  }
+});
+
 module.exports = router;
