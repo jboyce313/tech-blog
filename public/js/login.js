@@ -14,7 +14,9 @@ document.querySelector(".login").addEventListener("submit", async (e) => {
     if (response.ok) {
       document.location.replace("/");
     } else {
-      alert("Failed to log in.");
+      if (response.statusText === "invalid")
+        alert("Invalid username or password");
+      else alert("Server error");
     }
   }
 });

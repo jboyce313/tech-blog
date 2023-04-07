@@ -13,6 +13,12 @@ router.post("/", async (req, res) => {
     res.status(200).json(userData);
   } catch (err) {
     console.log(err);
+    if (err.errors[0].message === "username must be unique") {
+      res.statusMessage = "Username already taken.";
+    }
+    if (err.errors[0].message === "Validation len on password failed") {
+      res.statusMessage = "Password must be between 6 and 15 characters.";
+    }
     res.status(400).json(err);
   }
 });
@@ -24,7 +30,7 @@ router.post("/login", async (req, res) => {
       where: { username: req.body.username },
     });
     if (!userData) {
-      res.statusMessage = "There is no account associated with that username.";
+      res.statusMessage = "invalid";
       res.status(404).json({
         message: "There is no account associated with that username.",
       });
@@ -37,7 +43,7 @@ router.post("/login", async (req, res) => {
     );
 
     if (!validPassword) {
-      res.statusMessage = "Incorrect password.";
+      res.statusMessage = "invalid";
       res.status(400).json({ message: "Incorrect password." });
       return;
     }

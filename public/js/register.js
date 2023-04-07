@@ -23,7 +23,7 @@ document.querySelector(".register").addEventListener("submit", async (e) => {
       alert("Account created!");
       document.location.replace("/login");
     } else {
-      alert("Failed to register new user.");
+      alert(response.statusText);
     }
   }
 });
