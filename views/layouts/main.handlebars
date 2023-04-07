@@ -11,10 +11,17 @@
     <header>
       <h1>The Tech Blog</h1>
       <a href="/">Home</a>
-      <a href="/login">Log in</a>
+      {{#if loggedIn}}
+        <a class="nav-logout" href="/">Log out</a>
+      {{else}}
+        <a href="/login">Log in</a>
+      {{/if}}
     </header>
     <div>
       {{{body}}}
     </div>
+    {{#if loggedIn}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
   </body>
 </html>
