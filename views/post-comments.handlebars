@@ -5,3 +5,9 @@
   </div>
   <p>{{post.content}}</p>
 </div>
+{{#each post.comments as |comment|}}
+  <div class="comment">
+    <p>{{comment.content}}</p>
+    <p>Posted by {{comment.user.username}} on {{comment.createdAt}}</p>
+  </div>
+{{/each}}
