@@ -50,6 +50,7 @@ router.post("/login", async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
+      req.session.user = { id: userData.id, username: userData.username };
       res
         .status(200)
         .json({ user: userData, message: "You are now logged in!" });
@@ -72,18 +73,26 @@ router.post("/logout", (req, res) => {
   }
 });
 
-// get user by id and include their posts
-router.get("/:id", async (req, res) => {
+// get logged in user and include their posts
+router.get("/loggedin", async (req, res) => {
   try {
-    const userData = await User.findByPk(req.params.id, {
+    const userData = await User.findByPk(req.session.user.id, {
       include: [{ model: Post }],
     });
     const user = userData.get({ plain: true });
+    console.log(user.id);
+    res.statusMessage = user.id + "/" + user.username;
     res.status(200).json(user);
   } catch (err) {
     console.log(err);
     res.status(200).json(err);
   }
+});
+
+router.get("/check-login-status", (req, res) => {
+  const loggedIn = !!req.session.loggedIn;
+  statusMessage = loggedIn;
+  res.json({ loggedIn });
 });
 
 module.exports = router;

@@ -1,13 +1,30 @@
-<div class="post">
+<div data-id={{post.id}} class="post">
   <div class="post-header">
     <h2>{{post.title}}</h2>
     <p>Posted by {{post.user.username}} on {{post.createdAt}}</p>
   </div>
   <p>{{post.content}}</p>
 </div>
+{{#if loggedIn}}
+  <div class="add-comment-container">
+    <form class="add-comment">
+      <textarea
+        name="comment-field"
+        class="comment-field"
+        placeholder="Leave a comment..."
+        required
+      ></textarea>
+      <button type="submit" class="submit-comment">Submit comment</button>
+    </form>
+  </div>
+{{else}}
+  <p class="login-warning">Only logged in users may comment on posts.</p>
+{{/if}}
 {{#each post.comments as |comment|}}
   <div class="comment">
     <p>{{comment.content}}</p>
     <p>Posted by {{comment.user.username}} on {{comment.createdAt}}</p>
   </div>
 {{/each}}
+
+<script src="/js/post.js"></script>
