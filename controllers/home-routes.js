@@ -20,11 +20,25 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/create-post", (req, res) => {
-  res.render("create-post");
+  res.render("create-post", {
+    loggedIn: req.session.loggedIn,
+  });
 });
 
 router.get("/register", (req, res) => {
   res.render("register");
+});
+
+router.get("/edit-post/:id", async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id);
+    const post = postData.get({ plain: true });
+    console.log(post.title);
+    res.render("edit-post", { post, loggedIn: req.session.loggedIn });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
 
 router.get("/dashboard", async (req, res) => {
@@ -54,9 +68,16 @@ router.get("/post/:id", async (req, res) => {
       ],
     });
     const post = postData.get({ plain: true });
+
+    let ownPost = false;
+    if (req.session.loggedIn && req.session.user.id === post.user.id) {
+      ownPost = true;
+    }
+
     res.render("post-comments", {
       post,
       loggedIn: req.session.loggedIn,
+      ownPost,
     });
   } catch (err) {
     console.log(err);

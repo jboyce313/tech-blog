@@ -1,0 +1,19 @@
+<form class="edit-post" data-id={{post.id}}>
+  <textarea
+    maxlength="80"
+    oninput="this.value = this.value.replace(/\n/g, '')"
+    class="post-title"
+    placeholder="Enter post title..."
+    required
+  >{{post.title}}</textarea>
+
+  <textarea
+    name="post-content"
+    class="post-content"
+    placeholder="Post content goes here..."
+    required
+  >{{post.content}}</textarea>
+  <button type="submit" class="edit-post-btn">Finish edit</button>
+</form>
+
+<script src="/js/edit-post.js"></script>

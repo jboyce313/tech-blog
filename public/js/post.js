@@ -28,7 +28,17 @@ const submitComment = async (e) => {
   }
 };
 
+const editPost = () => {
+  const post_id = document.querySelector(".post").dataset.id;
+  document.location.replace(`/edit-post/${post_id}`);
+};
+
 const submitCommentButton = document.querySelector(".add-comment");
-if (submitCommentButton) {
+if (submitCommentButton)
   submitCommentButton.addEventListener("submit", submitComment);
-}
+
+const editPostButton = document.querySelector(".edit-post");
+if (editPostButton) editPostButton.addEventListener("click", editPost);
+
+const deletePostButton = document.querySelector(".delete-post");
+if (deletePostButton) deletePostButton.addEventListener("click", deletePost);

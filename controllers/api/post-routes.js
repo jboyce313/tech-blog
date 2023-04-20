@@ -39,4 +39,20 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+router.put("/update/:id", async (req, res) => {
+  try {
+    const post = await Post.findByPk(req.params.id);
+    // console.log(post);
+    const updatedTitle = req.body.title;
+    const updatedContent = req.body.content;
+    post.title = updatedTitle;
+    post.content = updatedContent;
+    console.log(post);
+    res.status(200).json(post);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
