@@ -3,11 +3,13 @@
     <div class="post">
       <div class="post-header">
         <h2 class="post-title" data-id={{post.id}}>{{post.title}}</h2>
-        <p>Posted by {{post.user.username}} on {{post.createdAt}}</p>
+        <p>Posted on {{post.createdAt}}</p>
       </div>
       <p>{{post.content}}</p>
     </div>
   {{/each}}
 </div>
+<button class="create-post-btn">Create new post</button>
 
 <script src="/js/dashboard.js"></script>
+<script src="/js/homepage.js"></script>

@@ -19,14 +19,30 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+router.get("/create-post", (req, res) => {
+  res.render("create-post");
+});
+
 router.get("/register", (req, res) => {
   res.render("register");
 });
 
-router.get("/dashboard", (req, res) => {
-  res.render("dashboard", {
-    loggedIn: req.session.loggedIn,
-  });
+router.get("/dashboard", async (req, res) => {
+  try {
+    const userData = await User.findByPk(req.session.user.id, {
+      include: [{ model: Post }],
+    });
+    const user = userData.get({ plain: true });
+    const posts = user.posts;
+    console.log(posts);
+    res.render("dashboard", {
+      posts,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
 
 router.get("/post/:id", async (req, res) => {

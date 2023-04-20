@@ -20,6 +20,16 @@
     "user_id": 1
   },
   {
+    "title": "Another Post",
+    "content": "I'm excited to announce my new project!",
+    "user_id": 1
+  },
+  {
+    "title": "Yet another Post",
+    "content": "I'm excited to announce my new project!",
+    "user_id": 1
+  },
+  {
     "title": "Fifth Post",
     "content": "I've been working on this for months and I'm finally ready to share it.",
     "user_id": 4
