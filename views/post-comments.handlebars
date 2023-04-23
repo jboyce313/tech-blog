@@ -22,14 +22,13 @@
     </form>
   </div>
 {{else}}
-
+  <div class="login-warning">
+    <p>Only logged in users may comment on posts. Click
+      <a href="/login">here</a>
+      to log in.</p>
+  </div>
 {{/if}}
 <h2 class="comments-header">Comments</h2>
-<div class="login-warning">
-  <p>Only logged in users may comment on posts. Click
-    <a href="/login">here</a>
-    to log in.</p>
-</div>
 {{#each post.comments as |comment|}}
   <div class="containter">
     <div class="comments">

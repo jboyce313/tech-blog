@@ -1,16 +1,17 @@
 :root {
-  --accent: rgba(238, 80, 23, 0.999);
-  /* --accent: rgb(125, 125, 125); */
-  --base: rgb(67, 67, 174);
-  --secondary: rgba(231, 232, 207, 0.471);
+  --accent: white;
+  --base: #000080;
+  --secondary: #008080;
 }
 
 /* ------ HEADER ------------ */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* color: white; */
 }
 
 h1 {
@@ -29,7 +30,6 @@ h1 span {
   padding-top: 20px;
   padding-left: 20px;
   padding-bottom: 10px;
-  /* border-bottom: var(--base) solid 4px; */
   background-color: var(--secondary);
   flex-wrap: wrap;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -51,13 +51,6 @@ h1 span {
   color: var(--accent);
 }
 
-/* ------ CONTENT CONTAINER ------------ */
-
-/* .container {
-  display: flex;
-  justify-content: center;
-} */
-
 /* ------ POSTS ------------ */
 
 .container {
@@ -70,16 +63,17 @@ h1 span {
 }
 
 .post {
-  border: var(--base) solid 1px;
+  /* border: var(--base) solid 1px; */
   margin: 40px 20px 0px 20px;
   background-color: var(--secondary);
+  border: none;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .post-header {
   display: flex;
-  border-bottom: var(--base) solid 1px;
+  /* border-bottom: var(--base) solid 1px; */
   justify-content: space-between;
 }
 
@@ -88,6 +82,7 @@ h1 span {
   margin-right: 8px;
   font-size: 12px;
   font-style: italic;
+  color: white;
 }
 
 .post-title {
@@ -97,6 +92,8 @@ h1 span {
 
 .post-content {
   margin: 10px;
+  color: white;
+  padding-bottom: 10px;
 }
 
 .dashboard-header {
@@ -116,7 +113,7 @@ h1 span {
 .comments-header {
   margin-left: 20px;
   margin-top: 40px;
-  color: var(--accent);
+  color: var(--base);
 }
 
 .comments {
@@ -212,11 +209,13 @@ button {
 .login .username {
   padding: 3px;
   width: 250px;
+  color: black;
 }
 
 .login .password {
   padding: 3px;
   width: 250px;
+  color: black;
 }
 
 .login-container {

@@ -1,37 +1,27 @@
 [
   {
-    "title": "First Post",
-    "content": "This is my first post on this platform.",
+    "title": "What is HTML?",
+    "content": "HTML, or HyperText Markup Language, is the standard language used for creating web pages. It is the foundation upon which most websites are built, providing a structure for content and defining the various elements of a web page such as headings, paragraphs, and images. HTML is a markup language, meaning that it uses tags to indicate the different elements of a web page. These tags are enclosed in angle brackets and are usually written in pairs, with an opening tag and a closing tag, that surround the content they apply to. Attributes are also used in HTML, providing additional information about an element. These attributes are included in the opening tag, consisting of a name and a value separated by an equals sign. HTML is an essential part of web development, and its basic principles must be understood to create effective and engaging web pages. However, HTML is just one component of web development. Other technologies, such as CSS for styling and layout, and JavaScript for interactivity, are also necessary to create a complete website.",
     "user_id": 5
   },
   {
-    "title": "Second Post",
-    "content": "Here's another post I wanted to share.",
+    "title": "Criticisms of Bootstrap",
+    "content": "Bootstrap is a popular front-end framework that is widely used in web development. While it has many benefits, including its ease of use and flexibility, there are also some criticisms of Bootstrap. One common criticism of Bootstrap is that it can lead to websites that look too similar. Bootstrap provides pre-designed components and templates that make it easy to create a website quickly, but this can also result in a lack of creativity and originality. Many websites that use Bootstrap end up looking similar to each other, with little variation in design. Another criticism of Bootstrap is that it can result in bloated code. Bootstrap includes many pre-designed components and styles, which can lead to excess code that slows down website loading times. This can be particularly problematic for mobile users who may have slower internet connections. Finally, some developers criticize Bootstrap for being too rigid. While it provides a great starting point for creating a website, it can be difficult to customize certain aspects of the design. This can result in websites that feel less unique and fail to stand out from competitors.Overall, while Bootstrap is a useful tool for web development, it is important to be aware of its limitations and potential drawbacks. It is essential for developers to balance efficiency with creativity and originality to create websites that are both functional and visually appealing.",
     "user_id": 3
   },
   {
-    "title": "Third Post",
-    "content": "I have some thoughts on the current political climate.",
+    "title": "A Brief History of JavaScript",
+    "content": "JavaScript was created by Brendan Eich in 1995, while he was working at Netscape Communications. Originally called Mocha, then LiveScript, the language was eventually renamed to JavaScript due to its similarity in syntax to Java. JavaScript was designed to be a client-side scripting language for web browsers, allowing for dynamic and interactive web pages. It quickly became a popular language for web development, and with the release of Ajax in 2005, it enabled even more dynamic and responsive web applications. Today, JavaScript is one of the most widely used programming languages, powering not just web development but also mobile app development and server-side scripting with Node.js.",
     "user_id": 2
   },
   {
-    "title": "Fourth Post",
-    "content": "I'm excited to announce my new project!",
+    "title": "What is Facebook made of?",
+    "content": "Facebook uses a range of programming languages to power its various applications and services. Some of the key languages used by Facebook include PHP, Hack, JavaScript, and React. PHP is used for the server-side processing of web pages, while Hack is a variant of PHP that provides additional features for better performance and safety. JavaScript is used for client-side scripting on the web, and React is a JavaScript library for building user interfaces. Facebook also uses other languages such as C++, Java, and Python for various purposes, including infrastructure and machine learning.",
     "user_id": 1
   },
   {
-    "title": "Another Post",
-    "content": "I'm excited to announce my new project!",
+    "title": "What is Python?",
+    "content": "Python is a popular high-level programming language that is widely used in various fields such as web development, data analysis, machine learning, and artificial intelligence. It was first released in 1991 by Guido van Rossum and has since become one of the most popular programming languages due to its simplicity, versatility, and vast ecosystem of libraries and tools. Python's syntax is easy to read and write, making it an ideal language for beginners to learn. Its popularity has resulted in a large community of developers who contribute to its development and create a wealth of resources for learning and using Python.",
     "user_id": 1
-  },
-  {
-    "title": "Yet another Post",
-    "content": "I'm excited to announce my new project!",
-    "user_id": 1
-  },
-  {
-    "title": "Fifth Post",
-    "content": "I've been working on this for months and I'm finally ready to share it.",
-    "user_id": 4
   }
 ]
