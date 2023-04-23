@@ -12,7 +12,7 @@ document.querySelector(".edit-post").addEventListener("submit", async (e) => {
   });
 
   if (response.ok) {
-    // document.location.replace("/dashboard");
+    document.location.replace("/dashboard");
     console.log(response);
     console.log(id);
     console.log(title);

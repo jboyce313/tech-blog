@@ -28,10 +28,10 @@ const submitComment = async (e) => {
   }
 };
 
-// const editPost = async () => {
-//   const post_id = document.querySelector(".post").dataset.id;
-//   document.location.replace(`/edit-post/${post_id}`);
-// };
+const editPost = () => {
+  const post_id = document.querySelector(".post").dataset.id;
+  document.location.replace(`/edit-post/${post_id}`);
+};
 
 const deletePost = async () => {
   const response = await fetch(
