@@ -28,9 +28,25 @@ const submitComment = async (e) => {
   }
 };
 
-const editPost = () => {
-  const post_id = document.querySelector(".post").dataset.id;
-  document.location.replace(`/edit-post/${post_id}`);
+// const editPost = async () => {
+//   const post_id = document.querySelector(".post").dataset.id;
+//   document.location.replace(`/edit-post/${post_id}`);
+// };
+
+const deletePost = async () => {
+  const response = await fetch(
+    `/api/posts/${document.querySelector(".post").dataset.id}`,
+    {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+    }
+  );
+
+  if (response.ok) {
+    document.location.replace("/dashboard");
+  } else {
+    alert(response.status);
+  }
 };
 
 const submitCommentButton = document.querySelector(".add-comment");

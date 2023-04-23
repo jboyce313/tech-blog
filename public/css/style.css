@@ -99,6 +99,12 @@ h1 span {
   margin: 10px;
 }
 
+.dashboard-header {
+  color: var(--accent);
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
 /* ------ VIEW SINGLE POST PAGE ------------ */
 
 .login-warning p {
@@ -195,3 +201,62 @@ button {
 }
 
 /* ------ LOGIN ------------ */
+
+.login {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  align-items: center;
+}
+
+.login .username {
+  padding: 3px;
+  width: 250px;
+}
+
+.login .password {
+  padding: 3px;
+  width: 250px;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.login-container * {
+  margin-top: 20px;
+}
+
+.submit-login {
+  margin-right: 0;
+  margin-left: 0;
+  width: 50%;
+}
+
+/* ------ REGISTER ------------ */
+
+.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.register * {
+  margin-top: 20px;
+}
+
+.register input {
+  padding: 3px;
+  width: 400px;
+}
+
+.sign-up {
+  margin-left: 0;
+  margin-right: 0;
+}
