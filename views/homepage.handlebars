@@ -1,13 +1,17 @@
-<div class="homepage-posts">
-  {{#each posts as |post|}}
-    <div class="post">
-      <div class="post-header">
-        <h2 class="post-title" data-id={{post.id}}>{{post.title}}</h2>
-        <p>Posted by {{post.user.username}} on {{post.createdAt}}</p>
+<div class="containter">
+  <div class="homepage-posts">
+
+    {{#each posts as |post|}}
+      <div class="post">
+        <div class="post-header">
+          <h2 class="post-title" data-id={{post.id}}>{{post.title}}</h2>
+          <p>Posted by {{post.user.username}} on {{post.createdAt}}</p>
+        </div>
+        <p class="post-content">{{post.content}}</p>
       </div>
-      <p>{{post.content}}</p>
-    </div>
-  {{/each}}
+    {{/each}}
+
+  </div>
 </div>
 
 <script src="/js/homepage.js"></script>

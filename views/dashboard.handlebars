@@ -1,3 +1,5 @@
+<button class="create-post-btn">Create new post</button>
+
 <div class="dashboard-posts">
   {{#each posts as |post|}}
     <div class="post">
@@ -5,11 +7,10 @@
         <h2 class="post-title" data-id={{post.id}}>{{post.title}}</h2>
         <p>Posted on {{post.createdAt}}</p>
       </div>
-      <p>{{post.content}}</p>
+      <p class="post-content">{{post.content}}</p>
     </div>
   {{/each}}
 </div>
-<button class="create-post-btn">Create new post</button>
 
 <script src="/js/dashboard.js"></script>
 <script src="/js/homepage.js"></script>

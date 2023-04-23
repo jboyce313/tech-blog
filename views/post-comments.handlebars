@@ -1,9 +1,9 @@
 <div data-id={{post.id}} class="post">
   <div class="post-header">
-    <h2>{{post.title}}</h2>
+    <h2 class="post-title">{{post.title}}</h2>
     <p>Posted by {{post.user.username}} on {{post.createdAt}}</p>
   </div>
-  <p>{{post.content}}</p>
+  <p class="post-content">{{post.content}}</p>
 </div>
 {{#if ownPost}}
   <button class="edit-post">Edit post</button>
@@ -22,12 +22,27 @@
     </form>
   </div>
 {{else}}
-  <p class="login-warning">Only logged in users may comment on posts.</p>
+
 {{/if}}
+<h2 class="comments-header">Comments</h2>
+<div class="login-warning">
+  <p>Only logged in users may comment on posts. Click
+    <a href="/login">here</a>
+    to log in.</p>
+</div>
 {{#each post.comments as |comment|}}
-  <div class="comment">
-    <p>{{comment.content}}</p>
-    <p>Posted by {{comment.user.username}} on {{comment.createdAt}}</p>
+  <div class="containter">
+    <div class="comments">
+      <div class="comment">
+        <p class="comment-content">{{comment.content}}</p>
+        <div class="commenter">
+          <p class="commenter">Posted by
+            {{comment.user.username}}
+            on
+            {{comment.createdAt}}</p>
+        </div>
+      </div>
+    </div>
   </div>
 {{/each}}
 

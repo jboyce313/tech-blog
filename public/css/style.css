@@ -1,0 +1,197 @@
+:root {
+  --accent: rgba(238, 80, 23, 0.999);
+  /* --accent: rgb(125, 125, 125); */
+  --base: rgb(67, 67, 174);
+  --secondary: rgba(231, 232, 207, 0.471);
+}
+
+/* ------ HEADER ------------ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  color: var(--base);
+  font-size: 50px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h1 span {
+  color: var(--accent);
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  /* border-bottom: var(--base) solid 4px; */
+  background-color: var(--secondary);
+  flex-wrap: wrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 90px;
+  margin-top: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links * {
+  margin-left: 80px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 25px;
+  color: var(--accent);
+}
+
+/* ------ CONTENT CONTAINER ------------ */
+
+/* .container {
+  display: flex;
+  justify-content: center;
+} */
+
+/* ------ POSTS ------------ */
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.homepage-posts {
+  width: 100%;
+}
+
+.post {
+  border: var(--base) solid 1px;
+  margin: 40px 20px 0px 20px;
+  background-color: var(--secondary);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.post-header {
+  display: flex;
+  border-bottom: var(--base) solid 1px;
+  justify-content: space-between;
+}
+
+.post-header p {
+  margin-top: 12px;
+  margin-right: 8px;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.post-title {
+  color: var(--base);
+  margin: 5px 0 5px 10px;
+}
+
+.post-content {
+  margin: 10px;
+}
+
+/* ------ VIEW SINGLE POST PAGE ------------ */
+
+.login-warning p {
+  font-style: italic;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.comments-header {
+  margin-left: 20px;
+  margin-top: 40px;
+  color: var(--accent);
+}
+
+.comments {
+  width: 100%;
+}
+
+.comment {
+  border: solid var(--accent) 1px;
+  margin: 10px 20px 0 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: rgba(239, 237, 237, 0.569);
+}
+
+.comment-content {
+  margin: 10px 0 10px 40px;
+}
+
+.commenter {
+  display: flex;
+  justify-content: end;
+  margin-right: 10px;
+}
+
+.commenter p {
+  font-style: italic;
+  margin-left: 40px;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+/* ------ BUTTONS ------------ */
+
+button {
+  background-color: var(--base);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-top: 25px;
+  margin-left: 20px;
+}
+
+/* ------ COMMENT BOX ------------ */
+
+.add-comment-container {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.add-comment {
+  display: flex;
+  align-items: end;
+}
+
+.comment-field {
+  width: 600px;
+  height: 100px;
+}
+
+/* ------ CREATE NEW POST ------------ */
+
+.create-post {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.create-post * {
+  margin: 10px 0;
+}
+
+.post-title {
+  font-size: 40px;
+  padding: 3px;
+}
+
+.new-post-content {
+  height: 500px;
+  padding: 10px;
+}
+
+/* ------ LOGIN ------------ */
